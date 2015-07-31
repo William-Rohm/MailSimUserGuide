@@ -451,7 +451,7 @@ We'd love to get your feedback on MailSim. You can send your questions and sugge
 
 * [Outlook Object Model](https://msdn.microsoft.com/en-us/library/office/ff866465.aspx)
 
-* [Exchange Server Protocols Documentation](https://msdn.microsoft.com/en-us/library/cc307725%40v=exchg.80%41.aspx)
+* [Exchange Server Protocols Documentation](https://msdn.microsoft.com/en-us/library/cc307725%28v=exchg.80%29.aspx)
 
 * [Exchange Test suites on Microsoft Connect](http://connect.microsoft.com/site216/Downloads/DownloadDetails.aspx?DownloadID=46994)
 
