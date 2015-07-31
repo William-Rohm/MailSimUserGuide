@@ -83,7 +83,7 @@ To use MailSim, you will need the following:
 
 - An Outlook-compatible email server
 
-  * You will need to create a separate email environment for running MailSim, including a set of test users in the global address list and some distribution groups – see [Provisioning an Outlook-compatible email server].
+  * You will need to create a separate email environment for running MailSim, including a set of test users in the global address list and some distribution groups – see [Provisioning an Outlook-compatible email server](#provisioning-an-outlook-compatible-email-server).
 
   * **Note:**  Do not run MailSim operations in your regular email environment, as the generated traffic can be substantial.
 
@@ -91,11 +91,11 @@ To use MailSim, you will need the following:
 
 Each of the three components of the MailSim test environment requires some setup, as described in the following sections:
 
-* [Provisioning an Outlook-compatible email server]
+* [Provisioning an Outlook-compatible email server](#provisioning-an-outlook-compatible-email-server)
 
-* [Creating Outlook clients]
+* [Creating Outlook clients](#creating-outlook-clients)
 
-* [Creating MailSim test profiles]
+* [Creating MailSim test profiles](#creating-mailsim-test-profiles)
 
 ### Provisioning an Outlook-compatible email server
 
@@ -137,7 +137,7 @@ Operations.xsd defines all MailSim operations that can be used in a sequence fil
 
   * An optional Sleep value specifying the number of seconds between repetitions. 
 
-  * Each operation also has its own elements and attributes for specifying email recipients, distribution lists, attachments, folder locations, and so forth – see [MailSim operations].
+  * Each operation also has its own elements and attributes for specifying email recipients, distribution lists, attachments, folder locations, and so forth – see [MailSim operations](#mailsim-operations).
 
 Sequence.xsd defines groups of operations as sequential sets of tasks. 
 
@@ -172,7 +172,7 @@ To run a sequence of operations using MailSim:
 ```
        MailSim TestSequence.xml
 ```
-5. The sequence’s process messages are displayed in the command window, and also saved to log files – see [Debugging output].
+5. The sequence’s process messages are displayed in the command window, and also saved to log files – see [Debugging output](#debugging-output).
 
 ## MailSim operations
 
@@ -251,8 +251,10 @@ If there are only 3 emails currently in the Inbox folder, this is the warning ge
 ### MailReply
 
 The MailReply operation sends replies to a specified number (Count) of emails located in a given folder, optionally just those which have a specified string in the subject. If the MailReply Count is zero, replies are sent to a random number of emails. 
+
 By default, each reply is sent only to the email originator; to change that behavior, set the optional ReplyAll attribute to true. 
-Like [MailSend], the replies can include attachment files, either specified or randomly chosen. 
+
+Like [MailSend](#mailsend), the replies can include attachment files, either specified or randomly chosen. 
 ```
 <MailReply OperationName="OpMailReply" 
     ReplyAll="true" 
@@ -276,7 +278,7 @@ The MailForward operation forwards email messages located in a folder to one or 
 </MailForward>
 ```
 
-Like [MailSend], recipients can be specified one by one or randomly, and the forwarded messages can include attachment files, also either specified or randomly chosen.
+Like [MailSend](#mailsend), recipients can be specified one by one or randomly, and the forwarded messages can include attachment files, also either specified or randomly chosen.
 
 ### MailMove
 
@@ -342,11 +344,11 @@ The parent folder (FolderPath) must be one of the following:
 
 * olFolderOutbox
 
-**Note:** Like [MailDelete], if there are fewer subfolders at runtime than the Count attribute value, MailSim reduces the Count value to the number of subfolders present in the parent folder and generates a warning message. 
+**Note:** Like [MailDelete](#maildelete), if there are fewer subfolders at runtime than the Count attribute value, MailSim reduces the Count value to the number of subfolders present in the parent folder and generates a warning message. 
 
 ## Debugging output
 
-While executing a sequence file, MailSim status messages are displayed in the Windows command window. In addition, each time a sequence runs, a log file is created to contain the same status messages in an XML wrapper – see [Log file output example].
+While executing a sequence file, MailSim status messages are displayed in the Windows command window. In addition, each time a sequence runs, a log file is created to contain the same status messages in an XML wrapper – see [Log file output example](#log-file-output-example).
 
 ### Command window output example
 
