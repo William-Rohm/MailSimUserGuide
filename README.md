@@ -427,10 +427,10 @@ System.Runtime.InteropServices.COMException (0x80004005): Outlook does not recog
 . . .
     </Detail>
   </Error>
-  <Error Name="MailSendToMyself" Time="7/2/2015 4:02:37 PM">
+  <Error Name="MailSendToMyself" Time="7/2/2016 4:02:37 PM">
     <Detail>Failed to run task</Detail>
   </Error>
-  <Info Name="MailSendToMyself" Time="7/2/2015 4:02:37 PM">
+  <Info Name="MailSendToMyself" Time="7/2/2016 4:02:37 PM">
     <Detail>Sleeping for 10 seconds</Detail>
   </Info>
 . . .
