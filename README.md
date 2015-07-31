@@ -244,7 +244,7 @@ The MailDelete operation deletes emails from a given folder, up to a specified n
 </MailDelete>
 ```
 
-If there are only 3 emails currently in the Inbox folder, this is the warning generated:
+In the above example, if there are only 3 emails currently in the Inbox folder, MailSim generates the following warning:
 ```
 5/15/2016 3:55:24 PM Warning : MailDeleteBySubjectOp : Only 3 email(s) in the folder, adjusting the number of emails to delete from 10 to 3
 ```
@@ -399,7 +399,7 @@ nize one or more names.
 
 ### Log file output example
 
-Log files describe the status of each operation and indicate whether the operation passed or failed. Log files are stored in the MailSim directory by default, or can be stored in a directory specified in the sequence file using the LogFileLocation attribute. The log files are named `YYYY-MM-DD HH-MM-SS <ComputerName> <SequenceFileName>.xml`. 
+Log files describe the status of each operation and indicate whether the operation passed or failed. Log files are stored in the MailSim directory by default, or can be stored in a directory specified in the sequence file using the LogFileLocation attribute. File names for the log files follow the format `YYYY-MM-DD HH-MM-SS <ComputerName> <SequenceFileName>.xml`. 
 
 Using the example from above, the log messages will resemble these:
 ```
