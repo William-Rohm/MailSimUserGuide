@@ -169,9 +169,11 @@ To run a sequence of operations using MailSim:
 
 4. Enter the following command: 
 
-`MailSim TestSequence.xml`
+```
+MailSim TestSequence.xml
+```
 
-5. The sequence’s process messages are displayed in the command window, and also saved to log files – see [Debugging output](#debugging-output).
+The sequence’s process messages are displayed in the command window, and also saved to log files – see [Debugging output](#debugging-output).
 
 ## MailSim operations
 
