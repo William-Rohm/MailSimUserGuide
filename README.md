@@ -79,7 +79,7 @@ To use MailSim, you will need the following:
 
   * The Outlook client should be configured with a default profile and connected to the email server under test – see Creating Outlook clients.
 
-  * **Note:** The client must have Microsoft .NET Framework version 4.5 installed.
+  * **Note:** The client must have [Microsoft .NET Framework version 4.5](http://www.microsoft.com/en-us/download/details.aspx?id=30653) installed.
 
 - An Outlook-compatible email server
 
@@ -107,7 +107,7 @@ The number of test users and sizes of distribution groups should be configured t
 
 To create an Outlook client on the MailSim machine, you can either use an existing Outlook 2013 instance, or install Outlook 2013 (32-bit).
 
-**Note:** .NET 4.5 must also be installed on the client machine.
+**Note:** [.NET 4.5](http://www.microsoft.com/en-us/download/details.aspx?id=30653) must also be installed on the client machine.
 
 1. Create a new email profile on the client.
 
