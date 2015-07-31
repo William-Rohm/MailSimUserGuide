@@ -441,7 +441,7 @@ System.Runtime.InteropServices.COMException (0x80004005): Outlook does not recog
 
 We'd love to get your feedback on MailSim. You can send your questions and suggestions to us:
 
-* In the Issues section of the [MailSim GitHub repository](https://github.com/OfficeDev/Interop-MailSim).
+* In the [Issues](https://github.com/OfficeDev/Interop-MailSim/issues) section of this repository.
 
 * Send us an email to [dochelp@microsoft.com](mailto:dochelp@microsoft.com?subject=Feedback%20on%20MailSim).
 
