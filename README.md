@@ -3,21 +3,21 @@
 ### Table of Contents
 - [Overview](#overview)
 
-- [Change History]
+- [Change History](#change-history)
 
-- [Prerequisites]
+- [Prerequisites](#prerequisites)
 
-- [Setting up MailSim]
+- [Setting up MailSim](#setting-up-mailsim)
 
-- [Executing MailSim]
+- [Executing MailSim](#executing-mailsim)
 
-- [MailSim operations]
+- [MailSim operations](#mailsim-operations)
 
-- [Debugging output]
+- [Debugging output](#debugging-output)
 
-- [Questions and comments]
+- [Questions and comments](#questions-and-comments)
 
-- [Additional resources]
+- [Additional resources](#additional-resources)
 
 ## Overview
 
@@ -41,10 +41,10 @@ There can be many client machines for a single email server.  The clients are in
 
 MailSim uses the Outlook Object Model (see [Additional resources](#Additional-resources)) to execute operations on an Outlook instance. The operations are called in the order in which they are defined in the configuration files, and can be iterated with specified delays between iterations. All operations are repeatable, except those with randomly selected recipients or attachments. 
 
-There are two types of MailSim XML input configuration files, one that defines individual test *operations*, such as sending a reply with an attachment, and one that defines *control sequences* for calling those operations, such as repeating the operation a number of times. The combination of an operation file and a sequence file is called a *test profile*. There can be many test profiles on one MailSim client, and test profiles can be different for each client. Each operation and sequence has configuration options for its name, type, duration, scale, order, format, and repetition – see [Creating MailSim test profiles] and [MailSim operations].
+There are two types of MailSim XML input configuration files, one that defines individual test *operations*, such as sending a reply with an attachment, and one that defines *control sequences* for calling those operations, such as repeating the operation a number of times. The combination of an operation file and a sequence file is called a *test profile*. There can be many test profiles on one MailSim client, and test profiles can be different for each client. Each operation and sequence has configuration options for its name, type, duration, scale, order, format, and repetition – see [Creating MailSim test profiles](#creating-mailsim-test-profiles) and [MailSim operations](#mailsim-operations).
 
 Here is an example operation and its control sequence:
-...
+```
 (defined in myOperationsFile.xml)
 
 <MailSend OperationName="OpMailSendToBob" Sleep="5">
@@ -59,7 +59,7 @@ Here is an example operation and its control sequence:
     Sleep="120">
   <Task Name="OpMailSendToBob"/>
 </OperationGroup>
-...
+```
 
 The above example defines an operation `OpMailSendToBob` that sends one email to "Bob TestUser" and then waits 5 seconds for latency. In the operation group `SendBobMail5Times`, that operation is repeated 5 times, with two minutes’ delay in between repetitions.
 
@@ -169,9 +169,9 @@ To run a sequence of operations using MailSim:
 
 4. Enter the following command: 
 
-...
+```
        MailSim TestSequence.xml
-...
+```
 5. The sequence’s process messages are displayed in the command window, and also saved to log files – see [Debugging output].
 
 ## MailSim operations
